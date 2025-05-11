@@ -43,7 +43,7 @@ class _SettingsState extends State<Settings> {
                         children: [
                           CountryFlag.fromCountryCode(
                             languageProvider.locale.languageCode == 'en'
-                                ? 'us'
+                                ? 'gb'
                                 : 'tr',
                             shape: const Circle(),
                             height: 36,
@@ -130,7 +130,7 @@ class _SettingsState extends State<Settings> {
                         children: [
                           CountryFlag.fromCountryCode(
                             languageProvider.scanningLanguage == 'eng'
-                                ? 'us'
+                                ? 'gb'
                                 : 'tr',
                             shape: const Circle(),
                             height: 36,
