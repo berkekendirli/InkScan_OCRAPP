@@ -1,0 +1,17 @@
+{
+  "appTitle": "InkScan",
+  "home": "Home",
+  "saved": "Saved",
+  "result": "Scan Result",
+  "settings": "Settings",
+  "scanFromCamera": "Scan from Camera",
+  "scanFromGallery": "Scan from Gallery",
+  "share": "Share",
+  "save": "Save",
+  "export": "Convert",
+  "processing": "Processing...",
+  "recognizedLabel": "Recognized Text",
+  "switch_theme_light": "Switch to Light Theme",
+  "switch_theme_dark": "Switch to Dark Theme",
+  "listen": "Listen"
+}

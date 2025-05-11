@@ -1,0 +1,17 @@
+{
+  "appTitle": "InkScan",
+  "home": "Ana Sayfa",
+  "saved": "Kaydedilenler",
+  "result": "Tarama Sonucu",
+  "settings": "Ayarlar",
+  "scanFromCamera": "Kameradan Tara",
+  "scanFromGallery": "Galeriden Tara",
+  "share": "Paylaş",
+  "save": "Kaydet",
+  "export": "Dönüştür",
+  "processing": "İşleniyor...",
+  "recognizedLabel": "Algılanan Metin",
+  "switch_theme_light": "Aydınlık Temaya Geç",
+  "switch_theme_dark": "Koyu Temaya Geç",
+  "listen": "Dinle"
+}
