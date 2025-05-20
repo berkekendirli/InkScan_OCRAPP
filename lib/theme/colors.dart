@@ -17,8 +17,8 @@ class AppColors {
   //Dark Theme Colors
   static Color darkBackground = _color('000000'); // Background
   static Color darkPrimary = _color('04070a'); // AppBar & Highlights
-  static Color darkButtonBackground = _color('04070a'); // Button Background
-  static Color darkInActiveTab = _color('516d85');
+  static Color darkButtonBackground = _color('25292B'); // Button Background
+  static Color darkInActiveTab = _color('686C6C');
   static Color darkAccent = _color('132433'); // Icons & Borders
   static Color darkTextPrimary = _color('d4dae0'); // Main Text
   static Color darkIconPrimary = _color('d4dae0'); // Icon Color

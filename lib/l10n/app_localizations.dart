@@ -125,16 +125,10 @@ abstract class AppLocalizations {
   /// **'Settings'**
   String get settings;
 
-  /// No description provided for @scanFromCamera.
-  ///
-  /// In en, this message translates to:
-  /// **'Scan from Camera'**
-  String get scanFromCamera;
-
   /// No description provided for @scanFromGallery.
   ///
   /// In en, this message translates to:
-  /// **'Scan from Gallery'**
+  /// **'Scan'**
   String get scanFromGallery;
 
   /// No description provided for @share.

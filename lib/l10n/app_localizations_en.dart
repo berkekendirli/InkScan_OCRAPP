@@ -24,10 +24,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get settings => 'Settings';
 
   @override
-  String get scanFromCamera => 'Scan from Camera';
-
-  @override
-  String get scanFromGallery => 'Scan from Gallery';
+  String get scanFromGallery => 'Scan';
 
   @override
   String get share => 'Share';

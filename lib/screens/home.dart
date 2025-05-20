@@ -126,22 +126,18 @@ class HomeContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: Column(
-        children: [
-          ImageButton(
-            onTap: () => pickImageFromCamera(context),
-            icon: Icons.camera_alt,
-            text: (AppLocalizations.of(context)!.scanFromCamera),
-            targetPage: Result(),
-          ),
-          const SizedBox(height: 10),
-          ImageButton(
-            onTap: () => pickImageFromGallery(context),
-            icon: Icons.photo,
-            text: (AppLocalizations.of(context)!.scanFromGallery),
-            targetPage: Result(),
-          ),
-        ],
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ImageButton(
+              onTap: () => pickImageFromGallery(context),
+              icon: Icons.document_scanner_outlined,
+              text: (AppLocalizations.of(context)!.scanFromGallery),
+              targetPage: Result(),
+            ),
+          ],
+        ),
       ),
     );
   }

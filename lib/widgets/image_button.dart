@@ -21,6 +21,7 @@ class ImageButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
     return InkWell(
+      customBorder: const CircleBorder(),
       onTap:
           onTap ??
           () {
@@ -30,22 +31,24 @@ class ImageButton extends StatelessWidget {
             );
           },
       child: Ink(
-        height: 100,
+        width: 175,
+        height: 175,
         padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color:
+              themeProvider.isDarkTheme
+                  ? AppColors.darkButtonBackground
+                  : AppColors.buttonBackground,
           border: Border.all(
             color:
                 themeProvider.isDarkTheme
                     ? AppColors.darkButtonText
                     : AppColors.buttonText,
           ),
-          color:
-              themeProvider.isDarkTheme
-                  ? AppColors.darkButtonBackground
-                  : AppColors.buttonBackground,
-          borderRadius: BorderRadius.circular(16),
         ),
-        child: Row(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Icon(
               icon,
@@ -53,11 +56,13 @@ class ImageButton extends StatelessWidget {
                   themeProvider.isDarkTheme
                       ? AppColors.darkIconPrimary
                       : AppColors.iconPrimary,
+              size: 40,
             ),
-            const SizedBox(width: 10),
+            const SizedBox(height: 10),
             Text(
               text,
               style: GoogleFonts.roboto(
+                fontSize: 16,
                 color:
                     themeProvider.isDarkTheme
                         ? AppColors.darkButtonText

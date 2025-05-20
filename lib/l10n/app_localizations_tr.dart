@@ -24,10 +24,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get settings => 'Ayarlar';
 
   @override
-  String get scanFromCamera => 'Kameradan Tara';
-
-  @override
-  String get scanFromGallery => 'Galeriden Tara';
+  String get scanFromGallery => 'Tara';
 
   @override
   String get share => 'Paylaş';
