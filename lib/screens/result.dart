@@ -11,6 +11,10 @@ import 'package:inkscan_ocr_app/widgets/text_functionality_button.dart';
 import 'package:inkscan_ocr_app/providers/theme_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
+import 'dart:io';
+import 'package:path_provider/path_provider.dart';
+import 'package:pdf/widgets.dart' as pw;
+import 'package:open_file/open_file.dart';
 
 class Result extends StatefulWidget {
   final Uint8List? imageBytes;
@@ -66,6 +70,26 @@ class _ResultState extends State<Result> {
       await _flutterTts.setSpeechRate(0.5); // Konuşma hızı
       await _flutterTts.speak(lowerCaseText); // Metni sese dönüştür
     }
+  }
+
+  // TXT olarak dışa aktar
+  Future<void> _exportTextAsTxt(String text) async {
+    final directory = await getApplicationDocumentsDirectory();
+    final file = File('${directory.path}/recognized_text.txt');
+    await file.writeAsString(text);
+    await OpenFile.open(file.path);
+  }
+
+  // PDF olarak dışa aktar
+  Future<void> _exportTextAsPdf(String text) async {
+    final pdf = pw.Document();
+    pdf.addPage(
+      pw.Page(build: (pw.Context context) => pw.Center(child: pw.Text(text))),
+    );
+    final directory = await getApplicationDocumentsDirectory();
+    final file = File('${directory.path}/recognized_text.pdf');
+    await file.writeAsBytes(await pdf.save());
+    await OpenFile.open(file.path);
   }
 
   @override
@@ -203,6 +227,46 @@ class _ResultState extends State<Result> {
                           child: FunctionButtons(
                             icon: Icons.upload,
                             text: (AppLocalizations.of(context)!.export),
+                            onTap: () async {
+                              final text = _textController.text;
+                              showModalBottomSheet(
+                                context: context,
+                                builder:
+                                    (context) => Column(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        ListTile(
+                                          leading: const Icon(
+                                            Icons.picture_as_pdf,
+                                          ),
+                                          title: Text(
+                                            (AppLocalizations.of(
+                                              context,
+                                            )!.saveAsPdf),
+                                          ),
+                                          onTap: () {
+                                            Navigator.pop(context);
+                                            _exportTextAsPdf(text);
+                                          },
+                                        ),
+                                        ListTile(
+                                          leading: const Icon(
+                                            Icons.description,
+                                          ),
+                                          title: Text(
+                                            (AppLocalizations.of(
+                                              context,
+                                            )!.saveAsTxt),
+                                          ),
+                                          onTap: () {
+                                            Navigator.pop(context);
+                                            _exportTextAsTxt(text);
+                                          },
+                                        ),
+                                      ],
+                                    ),
+                              );
+                            },
                           ),
                         ),
                         Expanded(
