@@ -14,5 +14,7 @@
   "switch_theme_light": "Aydınlık Temaya Geç",
   "switch_theme_dark": "Koyu Temaya Geç",
   "listen": "Dinle",
-  "emptyScan": "Henüz kaydedilmiş tarama yok."
+  "emptyScan": "Henüz kaydedilmiş tarama yok.",
+  "saveAsPdf": "PDF olarak kaydet",
+  "saveAsTxt": "TXT olarak kaydet"
 }

@@ -190,6 +190,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'No saved scans yet.'**
   String get emptyScan;
+
+  /// No description provided for @saveAsPdf.
+  ///
+  /// In en, this message translates to:
+  /// **'Save as PDF'**
+  String get saveAsPdf;
+
+  /// No description provided for @saveAsTxt.
+  ///
+  /// In en, this message translates to:
+  /// **'Save as TXT'**
+  String get saveAsTxt;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

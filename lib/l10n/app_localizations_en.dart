@@ -55,4 +55,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get emptyScan => 'No saved scans yet.';
+
+  @override
+  String get saveAsPdf => 'Save as PDF';
+
+  @override
+  String get saveAsTxt => 'Save as TXT';
 }

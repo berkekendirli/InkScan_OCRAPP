@@ -55,4 +55,10 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get emptyScan => 'Henüz kaydedilmiş tarama yok.';
+
+  @override
+  String get saveAsPdf => 'PDF olarak kaydet';
+
+  @override
+  String get saveAsTxt => 'TXT olarak kaydet';
 }

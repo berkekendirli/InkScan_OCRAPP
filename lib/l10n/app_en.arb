@@ -14,5 +14,7 @@
   "switch_theme_light": "Switch to Light Theme",
   "switch_theme_dark": "Switch to Dark Theme",
   "listen": "Listen",
-  "emptyScan": "No saved scans yet."
+  "emptyScan": "No saved scans yet.",
+  "saveAsPdf": "Save as PDF",
+  "saveAsTxt": "Save as TXT"
 }
