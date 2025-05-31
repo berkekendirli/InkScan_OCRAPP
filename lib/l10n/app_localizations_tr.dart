@@ -18,6 +18,9 @@ class AppLocalizationsTr extends AppLocalizations {
   String get saved => 'Kaydedilenler';
 
   @override
+  String get savebutton => 'Kaydedildi';
+
+  @override
   String get result => 'Tarama Sonucu';
 
   @override
@@ -49,4 +52,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get listen => 'Dinle';
+
+  @override
+  String get emptyScan => 'Henüz kaydedilmiş tarama yok.';
 }

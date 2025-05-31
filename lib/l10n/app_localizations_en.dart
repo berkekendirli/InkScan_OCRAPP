@@ -18,6 +18,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get saved => 'Saved';
 
   @override
+  String get savebutton => 'Saved';
+
+  @override
   String get result => 'Scan Result';
 
   @override
@@ -49,4 +52,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get listen => 'Listen';
+
+  @override
+  String get emptyScan => 'No saved scans yet.';
 }

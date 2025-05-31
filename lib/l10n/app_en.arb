@@ -2,6 +2,7 @@
   "appTitle": "InkScan",
   "home": "Home",
   "saved": "Saved",
+  "savebutton": "Saved",
   "result": "Scan Result",
   "settings": "Settings",
   "scanFromGallery": "Scan",
@@ -12,5 +13,6 @@
   "recognizedLabel": "Recognized Text",
   "switch_theme_light": "Switch to Light Theme",
   "switch_theme_dark": "Switch to Dark Theme",
-  "listen": "Listen"
+  "listen": "Listen",
+  "emptyScan": "No saved scans yet."
 }

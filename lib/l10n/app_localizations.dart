@@ -113,6 +113,12 @@ abstract class AppLocalizations {
   /// **'Saved'**
   String get saved;
 
+  /// No description provided for @savebutton.
+  ///
+  /// In en, this message translates to:
+  /// **'Saved'**
+  String get savebutton;
+
   /// No description provided for @result.
   ///
   /// In en, this message translates to:
@@ -178,6 +184,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Listen'**
   String get listen;
+
+  /// No description provided for @emptyScan.
+  ///
+  /// In en, this message translates to:
+  /// **'No saved scans yet.'**
+  String get emptyScan;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

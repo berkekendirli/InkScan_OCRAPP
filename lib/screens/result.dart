@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:inkscan_ocr_app/l10n/app_localizations.dart';
 import 'package:inkscan_ocr_app/methods/api_methods.dart';
 import 'package:inkscan_ocr_app/providers/language_provider.dart';
+import 'package:inkscan_ocr_app/providers/saved_texts_provider.dart';
 import 'package:inkscan_ocr_app/theme/colors.dart';
 import 'package:inkscan_ocr_app/widgets/text_functionality_button.dart';
 import 'package:inkscan_ocr_app/providers/theme_provider.dart';
@@ -178,6 +179,22 @@ class _ResultState extends State<Result> {
                       children: [
                         Expanded(
                           child: FunctionButtons(
+                            onTap: () {
+                              final textToSave = _textController.text.trim();
+                              if (textToSave.isNotEmpty) {
+                                Provider.of<SavedTextsProvider>(
+                                  context,
+                                  listen: false,
+                                ).addText(textToSave);
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(
+                                    content: Text(
+                                      AppLocalizations.of(context)!.savebutton,
+                                    ),
+                                  ),
+                                );
+                              }
+                            },
                             icon: Icons.save,
                             text: (AppLocalizations.of(context)!.save),
                           ),
